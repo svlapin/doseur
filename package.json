@@ -16,7 +16,9 @@
   "license": "MIT",
   "keywords": [
     "batch",
-    "rate"
+    "rate",
+    "queue",
+    "throttling"
   ],
   "homepage": "https:/github.com/svlapin/doseur#readme",
   "repository": {
