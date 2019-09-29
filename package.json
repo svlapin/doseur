@@ -1,6 +1,6 @@
 {
   "name": "doseur",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Zero-dependency simple queue to run similar operations in batches",
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
