@@ -10,7 +10,7 @@ Zero-dependency simple queue to run similar operations in batches
 
 Don't want to run db insert for each event generated in your application, but rather to insert them in batches? `doseur` them!
 
-### 🏠 [Homepage](https:/github.com/svlapin/doseur#readme)
+### 🏠 [Homepage](https://github.com/svlapin/doseur#readme)
 
 ## Features
 
