@@ -14,8 +14,9 @@ Don't want to run db insert for each event generated in your application, but ra
 
 ## Features
 
-- written in TypeScript - provides extensive typings
-- thoroughly unit-tested.
+- written in TypeScript - provides extensive typings for better developer experience
+- thoroughly unit-tested
+- easy to use - just define what how to handle a batch of items, and then just enqueue & forget.
 
 ## Install
 
