@@ -5,7 +5,11 @@
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build",
+    "build": "tsc",
+    "prebuild": "rimraf ./dist",
+    "security-check": "npm audit"
   },
   "author": "Sergey Lapin <sv0lapin@gmail.com>",
   "license": "MIT",
@@ -17,7 +21,11 @@
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.8",
     "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.3"
+  },
+  "engines": {
+    "node": ">=8.0.0"
   }
 }
