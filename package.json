@@ -18,6 +18,14 @@
     "batch",
     "rate"
   ],
+  "homepage": "https:/github.com/svlapin/doseur#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https:/github.com/svlapin/doseur.git"
+  },
+  "bugs": {
+    "url": "https:/github.com/svlapin/doseur/issues"
+  },
   "devDependencies": {
     "@types/jest": "^24.0.18",
     "@types/node": "^12.7.8",
