@@ -1,26 +1,21 @@
 <h1 align="center">Welcome to doseur 👋</h1>
-<p>
+
 [![Build Status](https://travis-ci.org/svlapin/doseur.svg?branch=master)](https://travis-ci.org/svlapin/doseur)
-
 [![code coverage](https://codecov.io/gh/svlapin/doseur/branch/master/graph/badge.svg)](https://codecov.io/gh/svlapin/doseur)
-
 [![npm version](https://badge.fury.io/js/doseur.svg)](https://badge.fury.io/js/doseur)
-
 [![Known Vulnerabilities](https://snyk.io/test/github/svlapin/doseur/badge.svg)](https://snyk.io/test/github/svlapin/doseur)
-
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
-</p>
+Zero-dependency simple queue to run similar operations in batches
 
-> Zero-dependency simple queue to run similar operations in batches
-
-> Don't want to run db insert for each event generated in your application, but rather to insert them in batches? `doseur` them!
+Don't want to run db insert for each event generated in your application, but rather to insert them in batches? `doseur` them!
 
 ### 🏠 [Homepage](https:/github.com/svlapin/doseur#readme)
 
-## Prerequisites
+## Features
 
-- node >=8.0.0
+- written in TypeScript - provides extensive typings
+- thoroughly unit-tested.
 
 ## Install
 
@@ -83,6 +78,36 @@ router.post('/api/todos', withEventQueue, (req, res) => {
 });
 ```
 
+Let's assume the server above receives 2 calls at the same time from user with id=1:
+
+```
+GET /api/todos
+```
+
+```
+POST /api/todos
+
+{ "foo": "barbaz" }
+```
+
+If no other requests arrive, in 10 seconds these two events will be flushed to `ApiEvent.insertMany`:
+
+```js
+ApiEvent.insertMany([
+  {
+    type: 'GetTodos',
+    user: 1
+  },
+  {
+    type: 'CreateTodo',
+    user: 1,
+    body: { foo: 'barbaz' }
+  }
+]);
+```
+
+Otherwise, if during that 10 seconds another 8 requests arrive, events are flushed as soon as 10th request arrives.
+
 ## Run tests
 
 ```sh
@@ -91,9 +116,10 @@ npm run test
 
 ## Author
 
-👤 **Sergey Lapin <sv0lapin@gmail.com>**
+👤 **Sergey Lapin**
 
 - Github: [@svlapin](https://github.com/svlapin)
+- Blog: https://svlapin.github.io
 
 ## 🤝 Contributing
 
