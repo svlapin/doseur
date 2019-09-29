@@ -120,7 +120,7 @@ npm run test
 👤 **Sergey Lapin**
 
 - Github: [@svlapin](https://github.com/svlapin)
-- Blog: https://svlapin.github.io
+- https://svlapin.github.io
 
 ## 🤝 Contributing
 
