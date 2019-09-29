@@ -9,7 +9,8 @@
     "prepublishOnly": "npm run build",
     "build": "tsc",
     "prebuild": "rimraf ./dist",
-    "security-check": "npm audit"
+    "security-check": "npm audit",
+    "lint": "tsc --noEmit"
   },
   "author": "Sergey Lapin <sv0lapin@gmail.com>",
   "license": "MIT",
