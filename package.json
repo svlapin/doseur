@@ -1,0 +1,23 @@
+{
+  "name": "doseur",
+  "version": "0.0.0",
+  "description": "Zero-dependency simple queue to run similar operations in batches",
+  "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Sergey Lapin <sv0lapin@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "batch",
+    "rate"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.8",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.3"
+  }
+}
