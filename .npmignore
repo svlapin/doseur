@@ -1,6 +1,9 @@
 src/
 *.test.js
+*.test.d.ts
 .travis.yml
+.prettierrc
+jest.config.js
 codecov.yml
 tsconfig.json
 tslint.json
