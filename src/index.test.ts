@@ -1,8 +1,8 @@
-import factory from "./";
+import factory from './';
 
-describe("doseur", () => {
-  describe("enqueue", () => {
-    it("enqueues items and flushes after timeout", done => {
+describe('doseur', () => {
+  describe('enqueue', () => {
+    it('enqueues items and flushes after timeout', (done) => {
       const timeout = 100;
 
       const spy = jest.fn();
@@ -22,7 +22,7 @@ describe("doseur", () => {
       }, timeout);
     });
 
-    it("flushes right away if more than maxQueue added", done => {
+    it('flushes right away if more than maxQueue added', (done) => {
       const timeout = 100;
 
       const spy = jest.fn();
@@ -41,8 +41,8 @@ describe("doseur", () => {
     });
   });
 
-  describe("reset", () => {
-    it("resets batcher discarding its state", done => {
+  describe('reset', () => {
+    it('resets batcher discarding its state', (done) => {
       const timeout = 100;
 
       const spy = jest.fn();
@@ -59,7 +59,7 @@ describe("doseur", () => {
       }, timeout);
     });
 
-    it("resets batcher without state", done => {
+    it('resets batcher without state', (done) => {
       const timeout = 100;
 
       const spy = jest.fn();

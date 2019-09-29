@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
 module.exports = {
   collectCoverage: true,
-  coverageDirectory: "./coverage/",
+  coverageDirectory: './coverage/',
   coverageThreshold: {
     global: {
       branches: 100,
@@ -11,10 +11,10 @@ module.exports = {
       statements: 100
     }
   },
-  roots: ["<rootDir>/src"],
-  testEnvironment: "node",
+  roots: ['<rootDir>/src'],
+  testEnvironment: 'node',
   transform: {
-    "^.+\\.ts$": "ts-jest"
+    '^.+\\.ts$': 'ts-jest'
   },
-  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"]
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 };
