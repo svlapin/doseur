@@ -12,7 +12,7 @@ describe("doseur", () => {
 
       setTimeout(() => {
         batcher.enqueue(2, 3);
-      }, timeout / 3);
+      }, 0);
 
       expect(spy).not.toHaveBeenCalled();
 
